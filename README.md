@@ -8,7 +8,7 @@ To reload the module in a running session, run
 ```
 Import-Module Core-Module -Force
 ````
-# Send-CustomEmail
+### Send-CustomEmail
 This function can be used to test email spoofing and troubleshoot issues with SPF, DKIM, and DMARC records.
 
 # References
