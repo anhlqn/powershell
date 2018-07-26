@@ -2,7 +2,11 @@
 All about Powershell scripting from references to sample scripts.
 
 # Core Module
+<<<<<<< HEAD
 **CoreModule** is a custom Powershell module that contains all commonly used functions shared by other scripts. I guess the easiest way to use this module is to copy the CoreModule folder to `C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\`, but it may not be the most secure way. Please share if you know a better approach. After that, functions in this module can be used anywhere on the machine without having to explicitly run `Import-Module CoreModule.psm1 -Force`.
+=======
+**CoreModule** is a custom Powershell module that contains all commonly used functions shared by other scripts. I guess the easiest way to use this module is to copy the `CoreModule` folder to `C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\`, but it may not be the most secure way. Please share if you know a better approach. After that, functions in this module can be used anywhere on the machine without having to explicitly run `Import-Module CoreModule.psm1 -Force`.
+>>>>>>> 36ab21591cf7b2db0b35c1a5cbce812ffce2e7a4
 
 To reload the module in a session, run 
 ```
