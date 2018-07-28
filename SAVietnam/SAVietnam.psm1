@@ -32,3 +32,25 @@ function Send-CustomEmail {
     # Send email
     $SMTPClient.Send($MailMessage)
 }
+
+function Get-SecureStringText {
+    <#
+    .SYNOPIS
+    Converts secure string back to plain text
+
+    .PARAMETER SecureString
+    Specifies a secure string
+
+    .EXAMPLE
+    Get-SecureStringText -SecureString $password
+    #>
+
+    [CmdletBinding()]
+    Param(
+        [Parameter(Mandatory = $true, ValueFromPipeline)]
+        $SecureString
+    )
+    Process {
+        [Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($SecureString))
+    }
+}
