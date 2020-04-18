@@ -2,11 +2,11 @@
 All about Powershell scripting from references to sample scripts.
 
 # Main Module
-**SysOps** is a Powershell module that contains all commonly used functions shared by other scripts. Perhaps the easiest way to use this module is to copy the `SysOps` folder to `C:\Program Files\WindowsPowerShell\Modules`. Please share if you know a better approach. After that, functions in this module can be used anywhere on the machine without having to explicitly run `Import-Module /path/to/SysOps.psm1 -Force`.
+**Ops** is a Powershell module that contains all commonly used functions shared by other scripts. Perhaps the easiest way to use this module is to copy the `Ops` folder to `C:\Program Files\WindowsPowerShell\Modules`. Please share if you know a better approach. After that, functions in this module can be used anywhere on the machine without having to explicitly run `Import-Module /path/to/Ops.psm1 -Force`.
 
 To reload the module in a session, run 
 ```
-Import-Module SysOps -Force
+Import-Module Ops -Force
 ````
 
 ### Send-CustomEmail
