@@ -1,10 +1,10 @@
 function Send-CustomEmail {
     <#
     .SYNOPIS
-    Sends email with different Mail.From and Header.From address
+        Sends an email with different Mail.From and Header.From address
 
     .EXAMPLE
-    Send-CustomEmail -MailFrom "mailfrom@example.com" -HeaderFrom "header@example.com" -Recipient "someone@gmail.com" -Subject "Test"
+        Send-CustomEmail -MailFrom "mailfrom@example.com" -HeaderFrom "header@example.com" -Recipient "someone@gmail.com" -Subject "Test"
     #>
 
     param (
@@ -14,14 +14,14 @@ function Send-CustomEmail {
         [string]$Subject,
         [string]$Body,
         [string]$Attach,
-        [string]$smtpServer = "smtp.example.com"
+        [string]$SmtpServer = "smtp.example.com"
     )
 
     # Create email object
     $MailMessage = New-Object System.Net.Mail.MailMessage
     $SMTPClient = New-Object System.Net.Mail.smtpClient
 
-    $SMTPClient.host = $smtpServer
+    $SMTPClient.host = $SmtpServer
     $MailMessage.Sender = $MailFrom
     $MailMessage.From = $HeaderFrom
     $MailMessage.To.add($Recipient)
@@ -33,16 +33,16 @@ function Send-CustomEmail {
     $SMTPClient.Send($MailMessage)
 }
 
-function Get-SecureStringText {
+function Convert-SecureStringToText {
     <#
     .SYNOPIS
-    Converts secure string back to plain text
+        Converts secure string back to plain text
 
     .PARAMETER SecureString
-    Specifies a secure string
+        Specifies a secure string
 
     .EXAMPLE
-    Get-SecureStringText -SecureString $password
+        Convert-SecureStringToText -SecureString $password
     #>
 
     [CmdletBinding()]
